@@ -33,3 +33,7 @@ Il inclut également des tests unitaires pour assurer la robustesse du code, en 
 ### Instructions
 
 #### 1. Cloner le projet
+
+```bash
+git clone https://github.com/username/projet_banque
+cd projet_banque
