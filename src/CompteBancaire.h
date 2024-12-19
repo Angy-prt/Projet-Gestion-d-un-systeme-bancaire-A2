@@ -30,4 +30,4 @@ public:
     bool transferer(CompteBancaire& compteDest, double montant);
 };
 
-#endif // COMPTEBANCAIRE_H
+#endif 
