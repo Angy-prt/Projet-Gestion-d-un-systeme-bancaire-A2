@@ -1,4 +1,4 @@
-# 💳 Projet Banque - Gestion de Comptes Bancaires en C++
+# 💳 Projet - Gestion de Comptes Bancaires en C++
 
 ## 📖 Description
 
