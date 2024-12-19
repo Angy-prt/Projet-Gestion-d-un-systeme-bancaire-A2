@@ -4,8 +4,6 @@
 
 Ce projet implémente un système de gestion bancaire en C++ en utilisant la programmation orientée objet (POO). Le système permet de créer des comptes bancaires, effectuer des dépôts, retraits, transferts et gérer les comptes courants, d'épargne et bancaires avec des fonctionnalités spécifiques pour chaque type de compte.
 
-Il inclut également des tests unitaires pour assurer la robustesse du code, en utilisant **Google Test**.
-
 ## 🚀 Fonctionnalités
 
 - **Gestion de comptes bancaires** : Création et gestion de comptes avec possibilité de retirer, déposer et transférer des fonds.
@@ -18,7 +16,6 @@ Il inclut également des tests unitaires pour assurer la robustesse du code, en 
 ## 🛠 Technologies utilisées
 
 - **Langage** : C++
-- **Framework de tests** : Google Test
 - **Environnement de développement** : WSL Ubuntu
 - **Compilateur** : g++
 - **Bibliothèque de gestion des comptes bancaires** : POO en C++
