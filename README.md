@@ -35,5 +35,5 @@ Il inclut également des tests unitaires pour assurer la robustesse du code, en 
 #### 1. Cloner le projet
 
 ```bash
-git clone https://github.com/username/projet_banque
+git clone https://github.com/angy-prt/Projet-Gestion-d-un-syteme-bancaire-A2
 cd projet_banque
