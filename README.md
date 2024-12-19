@@ -54,3 +54,14 @@ Si les tests unitaires sont dans un fichier séparé (par exemple, tests.cpp), c
 g++ ../src/*.cpp tests.cpp -o tests.exe -lgtest -lgtest_main -pthread
 ./tests
 ```
+## 🚧 Améliorations possibles
+
+- Ajouter des fonctionnalités pour gérer des prêts ou des cartes de crédit 💳
+- Améliorer l'interface graphique pour une gestion plus intuitive des comptes 🖥️
+- Ajouter une fonctionnalité pour envoyer des relevés bancaires par email 📧
+- Ajouter des alertes pour les transactions importantes ou les soldes faibles 📉
+
+## 👨‍💻 Auteurs
+
+Projet réalisé dans le cadre de la deuxième année à CESI.
+**Angy** - Étudiante en développement logiciel 💼
