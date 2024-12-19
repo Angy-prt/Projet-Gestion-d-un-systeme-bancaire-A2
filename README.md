@@ -64,4 +64,5 @@ g++ ../src/*.cpp tests.cpp -o tests.exe -lgtest -lgtest_main -pthread
 ## 👨‍💻 Auteurs
 
 Projet réalisé dans le cadre de la deuxième année à CESI.
+
 **Angy** - Étudiante en développement logiciel 💼
