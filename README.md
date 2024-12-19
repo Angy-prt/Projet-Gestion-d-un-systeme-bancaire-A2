@@ -36,7 +36,7 @@ Il inclut également des tests unitaires pour assurer la robustesse du code, en 
 
 ```bash
 git clone https://github.com/Angy-prt/Projet-Gestion-d-un-syteme-bancaire-A2
-cd projet_banque
+cd Projet-Gestion-d-un-syteme-bancaire-A2
 ```
 #### 2. Compiler le projet
 Dans le répertoire src/, compilez le projet :
