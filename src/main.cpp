@@ -31,7 +31,7 @@ void afficherMenuCompte() {
 
 int main() {
     Banque banque;
-    int prochainNumeroCompte = 10000000; // Numéro de compte initial
+    int prochainNumeroCompte = 10000005; // Numéro de compte initial
     std::srand(static_cast<unsigned>(std::time(0))); // Initialisation du générateur de nombres aléatoires
 
     int choixPrincipal;
