@@ -27,14 +27,22 @@ void CompteBancaire::afficherInfo() const {
 }
 
 void CompteBancaire::deposer(double montant) {
-    if (montant > 0) solde += montant;
+    if (montant > 0) {
+        solde += montant;
+        std::cout << "Montant validé :  " << montant << " EUR. Nouveau solde: " << solde << " EUR" << std::endl;
+    } else {
+        std::cout << "Montant invalide. Impossible de déposer " << montant << " EUR." << std::endl;
+    }
 }
+
+
 
 bool CompteBancaire::retirer(double montant) {
     if (montant > 0 && montant <= solde) {
         solde -= montant;
         return true;
     }
+    std::cout << "Fonds insuffisants." << std::endl;
     return false;
 }
 
@@ -44,4 +52,8 @@ bool CompteBancaire::transferer(CompteBancaire& compteDest, double montant) {
         return true;
     }
     return false;
+}
+
+void CompteBancaire::afficherSolde() const {
+    std::cout << "Solde actuel: " << solde << " EUR" << std::endl;
 }
