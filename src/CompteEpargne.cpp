@@ -21,8 +21,11 @@ void CompteEpargne::calculerInteret() {
     std::cout << "Intérêts calculés: " << interet << " EUR. Nouveau solde: " << solde << " EUR" << std::endl;
 }
 
-
 void CompteEpargne::afficherInfo() const {
     CompteBancaire::afficherInfo();
     std::cout << "Taux d'Interet: " << tauxInteret << "%" << std::endl;
+}
+
+CompteEpargne* CompteEpargne::creerCompteEpargne(const std::string& titulaire, double solde, int numeroCompte, double tauxInteret) {
+    return new CompteEpargne(titulaire, solde, numeroCompte, tauxInteret);
 }
