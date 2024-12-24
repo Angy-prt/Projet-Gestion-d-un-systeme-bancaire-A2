@@ -18,6 +18,9 @@ public:
 
     void calculerInteret();
     void afficherInfo() const override;
+
+    // Nouvelle méthode pour créer un compte épargne
+    static CompteEpargne* creerCompteEpargne(const std::string& titulaire, double solde, int numeroCompte, double tauxInteret);
 };
 
 #endif // COMPTEEPEPARGNE_H
