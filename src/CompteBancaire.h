@@ -18,6 +18,7 @@ public:
 
     // Getters et Setters
     std::string getTitulaire() const;
+    void afficherSolde() const;
     void setTitulaire(const std::string& titulaire);
     double getSolde() const;
     void setSolde(double solde);
@@ -30,4 +31,4 @@ public:
     bool transferer(CompteBancaire& compteDest, double montant);
 };
 
-#endif 
+#endif // COMPTEBANCAIRE_H
