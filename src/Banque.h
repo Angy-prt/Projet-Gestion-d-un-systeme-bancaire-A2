@@ -1,18 +1,18 @@
 #ifndef BANQUE_H
 #define BANQUE_H
 
-#include <vector>
-#include <memory>
 #include "CompteBancaire.h"
+#include <vector>
 
 class Banque {
 private:
-    std::vector<std::shared_ptr<CompteBancaire>> comptes;
+    std::vector<CompteBancaire*> comptes;  // Liste de pointeurs bruts vers CompteBancaire
 
 public:
-    // Méthodes
-    void ajouterCompte(const std::shared_ptr<CompteBancaire>& compte);
-    std::shared_ptr<CompteBancaire> rechercherCompteParNumero(int numero);
+    Banque();  // Constructeur avec base de données initiale
+    ~Banque(); // Destructeur pour gérer la suppression des comptes
+    void ajouterCompte(CompteBancaire* compte);
+    CompteBancaire* rechercherCompteParNumero(int numero);
     void afficherComptes() const;
 };
 
