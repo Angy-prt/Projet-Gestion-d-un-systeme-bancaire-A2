@@ -18,11 +18,13 @@ void CompteCourant::setDecouvertAutorise(double montant) { decouvertAutorise = m
 bool CompteCourant::retirer(double montant) {
     if (solde + decouvertAutorise >= montant) {
         solde -= montant;
+        std::cout << "Montant validé :  " << montant << " EUR. Nouveau solde: " << solde << " EUR" << std::endl;
         return true;
     }
     std::cout << "Fonds insuffisants (découvert inclus)." << std::endl;
     return false;
 }
+
 
 
 
