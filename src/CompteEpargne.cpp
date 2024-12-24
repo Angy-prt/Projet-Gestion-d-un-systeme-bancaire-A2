@@ -16,8 +16,11 @@ double CompteEpargne::getTauxInteret() const { return tauxInteret; }
 void CompteEpargne::setTauxInteret(double taux) { tauxInteret = taux; }
 
 void CompteEpargne::calculerInteret() {
-    solde += solde * (tauxInteret / 100.0);
+    double interet = solde * (tauxInteret / 100.0);
+    solde += interet;
+    std::cout << "Intérêts calculés: " << interet << " EUR. Nouveau solde: " << solde << " EUR" << std::endl;
 }
+
 
 void CompteEpargne::afficherInfo() const {
     CompteBancaire::afficherInfo();
