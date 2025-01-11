@@ -53,7 +53,3 @@ bool CompteBancaire::transferer(CompteBancaire& compteDest, double montant) {
     }
     return false;
 }
-
-void CompteBancaire::afficherSolde() const {
-    std::cout << "Solde actuel: " << solde << " EUR" << std::endl;
-}
