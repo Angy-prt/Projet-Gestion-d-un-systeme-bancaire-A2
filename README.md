@@ -35,13 +35,12 @@ Il inclut également des tests unitaires pour assurer la robustesse du code, en 
 #### 1. Cloner le projet
 
 ```bash
-git clone https://github.com/Angy-prt/Projet-Gestion-d-un-syteme-bancaire-A2
-cd Projet-Gestion-d-un-syteme-bancaire-A2
+.......
 ```
 #### 2. Compiler le projet
 Dans le répertoire src/, compilez le projet :
 ```bash
-cd src/ && make
+....
 ```
 #### 3. Lancer l'application
 Lancez le programme principal avec la commande suivante :
@@ -51,8 +50,7 @@ Lancez le programme principal avec la commande suivante :
 #### 4. Executer les tests unitaires
 Si les tests unitaires sont dans un fichier séparé (par exemple, tests.cpp), compilez et exécutez-les comme suit :
 ```bash
-g++ ../src/*.cpp tests.cpp -o tests.exe -lgtest -lgtest_main -pthread
-./tests
+.......
 ```
 ## 🚧 Améliorations possibles
 
