@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib> // Pour std::rand() et std::srand()
 #include <ctime>   // Pour std::time()
+#include <vector>  // Pour stocker plusieurs comptes
 #include "CompteBancaire.h"
 #include "CompteEpargne.h"
 #include "CompteCourant.h"
@@ -31,7 +32,8 @@ void afficherMenuCompte() {
 
 int main() {
     Banque banque;
-    int prochainNumeroCompte = 10000005; // Numéro de compte initial
+    std::vector<CompteBancaire*> comptes; // Conteneur pour stocker tous les comptes
+    int prochainNumeroCompte = 10000005;   // Numéro de compte initial
     std::srand(static_cast<unsigned>(std::time(0))); // Initialisation du générateur de nombres aléatoires
 
     int choixPrincipal;
@@ -61,15 +63,14 @@ int main() {
                 int numeroCompte = prochainNumeroCompte++;
 
                 if (typeCompte == 1) {
-                    // Utiliser un pointeur brut pour le compte épargne
-                    auto compte = new CompteEpargne(titulaire, solde, numeroCompte, 1.5); // Exemple avec un taux d'intérêt fixe
+                    auto compte = new CompteEpargne(titulaire, solde, numeroCompte, 1.5); // Taux fixe
                     banque.ajouterCompte(compte);
+                    comptes.push_back(compte); // Ajouter le compte à la liste
                     std::cout << "Compte épargne créé avec succès. Numéro de compte : " << numeroCompte << "\n";
                 } else if (typeCompte == 2) {
-                    double tauxInteret = 1.0 + (std::rand() % 50) / 10.0; // Taux entre 1% et 5%
-                    // Utiliser un pointeur brut pour le compte courant
-                    auto compte = new CompteCourant(titulaire, solde, numeroCompte, 500.0); // Exemple avec un découvert autorisé fixe
+                    auto compte = new CompteCourant(titulaire, solde, numeroCompte, 500.0); // Découvert fixe
                     banque.ajouterCompte(compte);
+                    comptes.push_back(compte); // Ajouter le compte à la liste
                     std::cout << "Compte courant créé avec succès. Numéro de compte : " << numeroCompte << "\n";
                 } else {
                     std::cout << "Option invalide.\n";
@@ -79,11 +80,15 @@ int main() {
 
             case 2: { // Se connecter à un compte
                 int numeroCompte;
-                std::cout << "Entrez le numéro de compte : ";
+                std::cout << "Entrez le numéro de compte à connecter : ";
                 std::cin >> numeroCompte;
 
+                // Chercher le compte correspondant
                 auto compte = banque.rechercherCompteParNumero(numeroCompte);
                 if (compte) {
+                    // Afficher les détails du compte
+                    compte->afficherInfo();  // Affichage des informations du compte (titulaire, solde, etc.)
+
                     int choixCompte;
                     do {
                         afficherMenuCompte();
@@ -95,7 +100,6 @@ int main() {
                                 std::cout << "Entrez le montant à déposer : ";
                                 std::cin >> montant;
                                 compte->deposer(montant);
-                                std::cout << "Dépôt effectué.\n";
                                 break;
                             }
                             case 2: { // Retrait
@@ -165,6 +169,11 @@ int main() {
                 std::cout << "Option invalide.\n";
         }
     } while (choixPrincipal != 4);
+
+    // Libérer la mémoire allouée pour les comptes
+    for (auto compte : comptes) {
+        delete compte;
+    }
 
     return 0;
 }
