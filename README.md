@@ -35,12 +35,13 @@ Il inclut également des tests unitaires pour assurer la robustesse du code, en 
 #### 1. Cloner le projet
 
 ```bash
-.......
+git clone https://github.com/Angy-prt/Projet-Gestion-d-un-systeme-bancaire-A2
+cd Projet-Gestion-d-un-systeme-bancaire-A2
 ```
 #### 2. Compiler le projet
 Dans le répertoire src/, compilez le projet :
 ```bash
-....
+g++ -g -o main main.cpp CompteBancaire.cpp CompteEpargne.cpp CompteCourant.cpp Banque.cpp
 ```
 #### 3. Lancer l'application
 Lancez le programme principal avec la commande suivante :
