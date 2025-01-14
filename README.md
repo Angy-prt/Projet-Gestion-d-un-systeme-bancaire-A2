@@ -11,7 +11,7 @@ Il inclut également des tests unitaires pour assurer la robustesse du code, en 
 - **Gestion de comptes bancaires** : Création et gestion de comptes avec possibilité de retirer, déposer et transférer des fonds.
 - **Comptes courants** : Possibilité de gérer un découvert autorisé lors des retraits.
 - **Comptes épargne** : Calcul des intérêts sur le solde.
-- **Recherche de comptes** : Recherche d'un compte par son numéro.
+- **Création de comptes** : Création d'un compte avec toutes ses informations.
 - **Affichage des informations de comptes** : Affichage des informations détaillées des comptes dans la banque.
 - **Tests unitaires** : Tests complets des fonctionnalités (dépôt, retrait, transfert, recherche de compte, etc.).
 
