@@ -50,7 +50,8 @@ Lancez le programme principal avec la commande suivante :
 #### 4. Executer les tests unitaires
 Si les tests unitaires sont dans un fichier séparé (par exemple, tests.cpp), compilez et exécutez-les comme suit :
 ```bash
-.......
+g++ -std=c++14 -I/usr/include/gtest -L/usr/lib/x86_64-linux-gnu Test1.cpp CompteBancaire.cpp CompteEpargne.cpp CompteCourant.cpp Banque.cpp -lgtest -lgtest_main -pthread -o Test1
+./Test1
 ```
 ## 🚧 Améliorations possibles
 
@@ -63,4 +64,4 @@ Si les tests unitaires sont dans un fichier séparé (par exemple, tests.cpp), c
 
 Projet réalisé dans le cadre de la deuxième année à CESI.
 
-**Angy** - Étudiante en développement logiciel 💼
+**Angélique** - Étudiante en développement logiciel 💼
